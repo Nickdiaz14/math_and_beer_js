@@ -13,6 +13,17 @@ exports.createUser = async (req, res) => {
     }
 }
 
+exports.getUser = async (req, res) => {
+    try {
+        let uuid = req.params.uuid
+        let usuario = await User.findOne({ UUID_id: uuid })
+        res.send(usuario.username)
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('Hubo un error')
+    }
+}
+
 exports.createOrUpdateRecord = async (req, res) => {
     try {
         const { username, record, string_record, game } = req.body
@@ -77,9 +88,9 @@ exports.getLeaderboards = async (req, res) => {
         const queries = uniqueGames.map(async (game) => {
             let leaderboard
             if (lowScoreGames.includes(game)) {
-                leaderboard = await Record.find({ game: game }).sort({ record: 1 }).limit(5)
+                leaderboard = await Record.find({ game: game }).sort({ record: 1 })
             } else {
-                leaderboard = await Record.find({ game: game }).sort({ record: -1 }).limit(5)
+                leaderboard = await Record.find({ game: game }).sort({ record: -1 })
             }
             return {
                 game: game,
@@ -87,7 +98,7 @@ exports.getLeaderboards = async (req, res) => {
             };
         });
         const result = await Promise.all(queries);
-        res.json(result)
+        res.send(result);
     } catch (error) {
         console.log(error)
         res.status(500).send('Hubo un error')

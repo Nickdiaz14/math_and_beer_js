@@ -1,0 +1,27 @@
+### Create user
+POST http://127.0.0.1:5000/api/create_user
+content-type: application/json
+
+{
+    "username": "Pulpa",
+    "UUID_id": "bf6a1f2b-5a2a-4f62-a4c6-d24b51b795cf"
+}
+
+### Get user name
+GET http://127.0.0.1:5000/api/get_user/bf6a1f2b-5a2a-4f62-a4c6-d24b51b795cf
+
+### Create or update record
+PUT http://127.0.0.1:5000/api/record
+content-type: application/json
+
+{
+    "record": 200,
+    "string_record": "00:02.00",
+    "game": "T4"
+}
+
+### Get specific game leaderboard
+GET http://127.0.0.1:5000/api/leaderboard/T4
+
+### Get all leaderboards
+GET http://127.0.0.1:5000/api/leaderboards
