@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const gameController = require('../controllers/gameController')
+const infoController = require('../controllers/infoController')
 
 
 /**
@@ -183,5 +184,8 @@ router.get('/leaderboard/:game', gameController.getLeaderboard)
  *         description: Error del servidor
  */
 router.get('/leaderboards', gameController.getLeaderboards)
+
+router.post('/create_event', infoController.createEvent)
+router.get('/events', infoController.getEvents)
 
 module.exports = router

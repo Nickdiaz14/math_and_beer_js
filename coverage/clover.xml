@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1773189035723" clover="3.2.0">
-  <project timestamp="1773189035723" name="All files">
-    <metrics statements="91" coveredstatements="77" conditionals="10" coveredconditionals="7" methods="9" coveredmethods="8" elements="110" coveredelements="92" complexity="0" loc="91" ncloc="91" packages="4" files="6" classes="6"/>
+<coverage generated="1773674341610" clover="3.2.0">
+  <project timestamp="1773674341610" name="All files">
+    <metrics statements="111" coveredstatements="86" conditionals="10" coveredconditionals="7" methods="11" coveredmethods="8" elements="132" coveredelements="101" complexity="0" loc="111" ncloc="111" packages="4" files="8" classes="8"/>
     <package name="math_and_beer_js">
       <metrics statements="19" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="app.js" path="C:\Users\elkin\Documents\GitHub\math_and_beer_js\app.js">
@@ -31,7 +31,7 @@
       </file>
     </package>
     <package name="math_and_beer_js.controllers">
-      <metrics statements="57" coveredstatements="44" conditionals="10" coveredconditionals="7" methods="8" coveredmethods="8"/>
+      <metrics statements="71" coveredstatements="47" conditionals="10" coveredconditionals="7" methods="10" coveredmethods="8"/>
       <file name="gameController.js" path="C:\Users\elkin\Documents\GitHub\math_and_beer_js\controllers\gameController.js">
         <metrics statements="57" coveredstatements="44" conditionals="10" coveredconditionals="7" methods="8" coveredmethods="8"/>
         <line num="1" count="2" type="stmt"/>
@@ -92,9 +92,32 @@
         <line num="103" count="0" type="stmt"/>
         <line num="104" count="0" type="stmt"/>
       </file>
+      <file name="infoController.js" path="C:\Users\elkin\Documents\GitHub\math_and_beer_js\controllers\infoController.js">
+        <metrics statements="14" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+      </file>
     </package>
     <package name="math_and_beer_js.models">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Event.js" path="C:\Users\elkin\Documents\GitHub\math_and_beer_js\models\Event.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+      </file>
       <file name="Record.js" path="C:\Users\elkin\Documents\GitHub\math_and_beer_js\models\Record.js">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
@@ -109,18 +132,21 @@
       </file>
     </package>
     <package name="math_and_beer_js.routes">
-      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="games.js" path="C:\Users\elkin\Documents\GitHub\math_and_beer_js\routes\games.js">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="routes.js" path="C:\Users\elkin\Documents\GitHub\math_and_beer_js\routes\routes.js">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
-        <line num="74" count="2" type="stmt"/>
-        <line num="99" count="2" type="stmt"/>
-        <line num="131" count="2" type="stmt"/>
-        <line num="158" count="2" type="stmt"/>
-        <line num="185" count="2" type="stmt"/>
-        <line num="187" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="100" count="2" type="stmt"/>
+        <line num="132" count="2" type="stmt"/>
+        <line num="159" count="2" type="stmt"/>
+        <line num="186" count="2" type="stmt"/>
+        <line num="188" count="2" type="stmt"/>
+        <line num="189" count="2" type="stmt"/>
+        <line num="191" count="2" type="stmt"/>
       </file>
     </package>
   </project>

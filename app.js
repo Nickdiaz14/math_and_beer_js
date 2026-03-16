@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const router = require('./routes/games');
+const router = require('./routes/routes');
 const swaggerSpec = require('./swagger');
 const swaggerUI = require('swagger-ui-express');
 const cors = require('cors');
