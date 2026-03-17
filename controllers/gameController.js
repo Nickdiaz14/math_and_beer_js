@@ -8,17 +8,17 @@ exports.createUser = async (req, res) => {
         const existeCode = await User.findOne({ UUID_id: UUID_id });
         const existeNombre = await User.findOne({ username: username });
         if (existeCode) {
-            return res.status(400).send({
+            return res.status(200).send({
                 created: false,
                 observation: "Ya se asignó este código"
             });
         } else if (existeNombre) {
-            return res.status(400).send({
+            return res.status(200).send({
                 created: false,
                 observation: "Ya existe un usuario con este nombre"
             });
         } else if (username.length > 15) {
-            return res.status(400).send({
+            return res.status(200).send({
                 created: false,
                 observation: "El nombre es muy largo"
             });
