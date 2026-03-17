@@ -4,12 +4,31 @@ const lowScoreGames = ['T04', 'T05', 'T10', 'T4', 'T6', 'T8', 'TSpeed'];
 
 exports.createUser = async (req, res) => {
     try {
-        let nuevoUsuario = new User(req.body);
-        await nuevoUsuario.save()
-        res.send(nuevoUsuario)
+        const { username, UUID_id } = req.body;
+        const existeCode = await User.findOne({ UUID_id: UUID_id });
+        const existeNombre = await User.findOne({ username: username });
+        if (existeCode) {
+            return res.status(400).send({
+                created: false,
+                observation: "Ya se asignó este código"
+            });
+        } else if (existeNombre) {
+            return res.status(400).send({
+                created: false,
+                observation: "Ya existe un usuario con este nombre"
+            });
+        } else if (username.length > 15) {
+            return res.status(400).send({
+                created: false,
+                observation: "El nombre es muy largo"
+            });
+        }
+        const nuevoUsuario = new User(req.body);
+        await nuevoUsuario.save();
+        res.status(200).send({ created: true, observation: nuevoUsuario });
     } catch (error) {
-        console.log(error)
-        res.status(500).send('Hubo un error')
+        console.error("Error al crear usuario:", error);
+        res.status(500).send('Hubo un error en el servidor');
     }
 }
 
@@ -18,6 +37,16 @@ exports.getUser = async (req, res) => {
         let uuid = req.params.uuid
         let usuario = await User.findOne({ UUID_id: uuid })
         res.send(usuario.username)
+    } catch (error) {
+        console.log(error)
+        res.status(500).send('Hubo un error')
+    }
+}
+
+exports.getUsers = async (req, res) => {
+    try {
+        let usuarios = await User.find({})
+        res.send(usuarios)
     } catch (error) {
         console.log(error)
         res.status(500).send('Hubo un error')

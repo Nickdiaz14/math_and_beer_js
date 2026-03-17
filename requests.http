@@ -3,8 +3,8 @@ POST http://127.0.0.1:5000/api/create_user
 content-type: application/json
 
 {
-    "username": "Pulpa",
-    "UUID_id": "bf6a1f2b-5a2a-4f62-a4c6-d24b51b795cf"
+    "username": "das",
+    "UUID_id": "bf6a1f2b-5a2a-4f62-a4c6-d24b51b795caew"
 }
 
 ### Get user name
