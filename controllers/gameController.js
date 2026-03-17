@@ -36,7 +36,11 @@ exports.getUser = async (req, res) => {
     try {
         let uuid = req.params.uuid
         let usuario = await User.findOne({ UUID_id: uuid })
-        res.send(usuario.username)
+        if (usuario) {
+            res.send(usuario.username)
+        } else {
+            res.send("")
+        }
     } catch (error) {
         console.log(error)
         res.status(500).send('Hubo un error')

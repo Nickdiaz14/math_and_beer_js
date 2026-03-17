@@ -8,7 +8,7 @@ content-type: application/json
 }
 
 ### Get user name
-GET http://127.0.0.1:5000/api/get_user/bf6a1f2b-5a2a-4f62-a4c6-d24b51b795cf
+GET http://127.0.0.1:5000/api/get_user/bf6a1f2b-5a2a-4f62-a4c6-d24b51b795caews
 
 ### Create or update record
 PUT http://127.0.0.1:5000/api/record
